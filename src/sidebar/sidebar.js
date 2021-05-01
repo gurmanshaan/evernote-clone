@@ -38,7 +38,6 @@ class SidebarComponent extends React.Component {
                                     onKeyUp={(e) => this.updateTitle(e.target.value)}>
                                 </input>
                                 <Button
-
                                     className={classes.newNoteSubmitBtn}
                                     onClick={this.newNote}
                                 >
