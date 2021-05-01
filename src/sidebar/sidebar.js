@@ -16,7 +16,6 @@ class SidebarComponent extends React.Component {
     render() {
 
         const { notes, classes, selectedNoteIndex } = this.props;
-        //const space = ' '.charCodeAt()
 
         if (notes) {
             return (
