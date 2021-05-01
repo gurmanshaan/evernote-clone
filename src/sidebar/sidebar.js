@@ -16,6 +16,7 @@ class SidebarComponent extends React.Component {
     render() {
 
         const { notes, classes, selectedNoteIndex } = this.props;
+        //const space = ' '.charCodeAt()
 
         if (notes) {
             return (
@@ -38,6 +39,7 @@ class SidebarComponent extends React.Component {
                                     onKeyUp={(e) => this.updateTitle(e.target.value)}>
                                 </input>
                                 <Button
+                                    disabled={!this.state.title}
                                     className={classes.newNoteSubmitBtn}
                                     onClick={this.newNote}
                                 >
@@ -82,7 +84,7 @@ class SidebarComponent extends React.Component {
     }
 
     newNote = () => {
-        if (this.state.title !== " " && null) {
+        if (this.state.title !== " ") {
             this.props.newNote(this.state.title);
             this.setState({ title: null, addingNote: false })
         }

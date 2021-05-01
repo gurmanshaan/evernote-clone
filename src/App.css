@@ -7,6 +7,7 @@ body {
   padding: 0;
   overflow: hidden;
 }
+
 #evernote-container {
   height: 100%;
   box-sizing: border-box;
@@ -15,6 +16,16 @@ body {
   height: 100%;
   box-sizing: border-box;
 }
+
+@media only screen and (max-width: 600px) {
+  .quill {
+    height: 100%;
+    box-sizing: border-box;
+    width: calc(100% - 300px);
+    float: left;
+  }
+}
+
 .quill {
   height: 100%;
   box-sizing: border-box;
